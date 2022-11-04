@@ -1,0 +1,44 @@
+#include <algoviz/Turtle.hpp>
+
+Turtle t = Turtle(420,420);
+t.setWidth(6);
+t.setColor("#5184AF");
+t.moveTo(0, 200);
+
+int abstand = 0;
+
+int anzahl = 0; 
+
+std::cout << " Gib ein, wie oft das Muster gedruckt werden soll : ";
+
+std::cin >> anzahl;
+
+for (int zaehler = 0; zaehler < anzahl; zaehler=zaehler + 1) {
+
+    
+
+t.moveTo(abstand, 160);
+t.forward(50);
+    
+t.moveTo(abstand, 210);
+t.forward(50);
+
+t.moveTo(abstand, 200);    
+t.forward(10); //unten links
+t.turn(270);
+t.forward(30); //links lang
+t.turn(90);
+t.forward(40); //oben lang
+t.turn(90);
+t.forward(20); //rechts mittel
+t.turn(90);
+t.forward(22); //unten kurz
+t.moveTo( abstand + 42, 180);
+t.forward(22); //oben kurz
+t.turn(270);
+t.forward(20); //links kurz
+t.turn(270);
+t.forward(30); //unten lang
+abstand = abstand + 50; 
+
+}
